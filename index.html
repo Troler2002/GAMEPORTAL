@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMEPORTAL | Tu Destino Gaming</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container nav-top">
+            <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> GAME<span>PORTAL</span></a>
+            <div class="google-search-wrap">
+                <form class="google-search-bar" onsubmit="event.preventDefault();">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="¿Qué estás buscando en GAMEPORTAL?" class="google-search-input">
+                    <div class="google-autocomplete"></div>
+                </form>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" class="btn-login">INICIO</a>
+                <a href="registro.html" class="btn-login btn-register">REGISTRO</a>
+            </div>
+        </div>
+        <div class="nav-container nav-bottom">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="pc.html">PC</a></li>
+                <li><a href="xbox.html">XBOX</a></li>
+                <li><a href="ps3.html">PS3</a></li>
+                <li><a href="wii.html">WII</a></li>
+                <li><a href="ds.html">DS</a></li>
+                <li class="separator">|</li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="trucos.html">Trucos</a></li>
+                <li><a href="descargas.html">Descargas</a></li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero pc-header-index">
+        <div class="hero-content">
+            <h1>Tu Portal de <span>Gaming</span></h1>
+            <p>Optimiza tu rendimiento, domina tus juegos favoritos y mantente a la vanguardia con las guías más completas y las últimas novedades del ecosistema gaming.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="featured text-center">
+            <h2 class="section-title centered">Juegos <span>Destacados</span></h2>
+            <p style="color: var(--text-gray); margin-bottom: 40px; margin-top: -15px;">Descubre los títulos más populares en nuestra comunidad</p>
+            
+            <div class="featured-grid">
+                
+                <div class="game-card game-card-trigger">
+                    <div class="game-thumb">
+                        <img src="Img/The Witcher 3 Wild Hunt.jpg" alt="The Witcher 3">
+                        <span class="badge badge-pc">PC</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>The Witcher 3: Wild Hunt</h3>
+                        <p>Acompaña a Geralt de Rivia en el RPG de mundo abierto más premiado de la historia.</p>
+                    </div>
+                </div>
+
+                <div class="game-card game-card-trigger">
+                    <div class="game-thumb">
+                        <img src="Img/Minecraft.jpg" alt="Minecraft">
+                        <span class="badge badge-xbox">XBOX</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>Minecraft</h3>
+                        <p>Construye, sobrevive y explora mundos infinitos en el fenómeno global de bloques.</p>
+                    </div>
+                </div>
+
+                <div class="game-card game-card-trigger">
+                    <div class="game-thumb">
+                        <img src="Img/The Last of Us.jpg" alt="The Last of Us">
+                        <span class="badge badge-ps3">PS3</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>The Last of Us</h3>
+                        <p>Vive la odisea de Joel y Ellie en un mundo post-apocalíptico brutal y emocional.</p>
+                        <div class="tags"><span>Survival</span><span>Acción</span></div>
+                    </div>
+                </div>
+
+                <div class="game-card game-card-trigger">
+                    <div class="game-thumb">
+                        <img src="Img/Super Mario Galaxy.jpg" alt="Mario Galaxy">
+                        <span class="badge badge-wii">WII</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>Super Mario Galaxy</h3>
+                        <p>Mario viaja a través del espacio en una aventura que desafía la gravedad.</p>
+                        <div class="tags"><span>Aventura</span><span>Nintendo</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> GAME<span>PORTAL</span></a>
+                <p>Tu portal definitivo para guías, optimización y comunidad gamer. Desde clásicos de Nintendo hasta lo último en hardware y software para PC.</p>
+                <div class="footer-social">
+                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer" title="Twitch"><i class="fab fa-twitch"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pc.html">PC Gaming</a></li>
+                    <li><a href="xbox.html">Xbox</a></li>
+                    <li><a href="ps3.html">PS3</a></li>
+                    <li><a href="wii.html">Wii</a></li>
+                    <li><a href="ds.html">DS</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contenido</h4>
+                <ul>
+                    <li><a href="trucos.html">Trucos</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="descargas.html">Descargas</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Comunidad</h4>
+                <ul>
+                    <li><a href="comunidad.html">Muro</a></li>
+                    <li><a href="foro.html">Foro</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"> 
+                <p>&copy; 2026 GAMEPORTAL. Todos los derechos reservados. | <a href="privacidad.html">Política de Privacidad</a> | <a href="terminos.html">Términos de Servicio</a> | Hecho por Jean Silva</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Detalle de Juego Cyber-Minimalista -->
+    <div id="gameDetailModal" class="detail-modal-overlay">
+        <div class="modal-detail-card">
+            <span class="close-detail"><i class="fas fa-times"></i></span>
+            <div class="modal-header-img">
+                <img id="modalGameImg" src="" alt="Imagen del Juego">
+                <span id="modalGameBadge" class="modal-badge-dynamic">Sección</span>
+            </div>
+            <div class="modal-detail-body">
+                <div class="modal-view-info" id="modalViewInfo">
+                    <h2 id="modalGameTitle"></h2>
+                    <h4 id="modalGameSubtitle" style="color: var(--red-neon); margin-bottom: 15px; font-size: 0.9rem; text-transform: uppercase; display: none;"></h4>
+                    <div id="modalGameSynopsis" class="modal-synopsis"></div>
+                    <div id="modalTrickCodes" style="display: none;"></div>
+                    <ul class="modal-features">
+                        <li><i class="fas fa-microchip"></i> Rendimiento Optimizado</li>
+                        <li><i class="fas fa-shield-alt"></i> Instalación Segura</li>
+                        <li><i class="fas fa-users"></i> Soporte Multi-idioma</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-view-chars" id="modalViewChars">
+                    <h2 style="font-size: 1.4rem;">Personajes de <span id="charGameTitle">Juego</span></h2>
+                    <div class="modal-chars-grid" id="modalCharsGrid">
+                        <!-- Tarjetas de personajes generadas por JS -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-detail-footer">
+                <button class="btn-modal-main btn-card-dl"><i class="fas fa-download"></i> Descargar Juego</button>
+                <button class="btn-modal-sec btn-card-chars" id="btnToggleView"><i class="fas fa-users"></i> Ver Personajes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Visualización de Imágenes (Lightbox) -->
+    <div id="imageViewerModal" class="video-player-overlay" style="display: none; z-index: 6000;">
+        <span class="close-image-viewer">&times;</span>
+        <div class="video-player-container">
+            <img id="viewerImg" src="" alt="Imagen Full">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

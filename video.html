@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos y Multimedia | GAMEPORTAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container nav-top">
+            <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> GAME<span>PORTAL</span></a>
+            <div class="google-search-wrap">
+                <form class="google-search-bar" onsubmit="event.preventDefault();">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="¿Qué estás buscando en GAMEPORTAL?" class="google-search-input">
+                    <div class="google-autocomplete"></div>
+                </form>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" class="btn-login">INICIO</a>
+                <a href="registro.html" class="btn-login btn-register">REGISTRO</a>
+            </div>
+        </div>
+        <div class="nav-container nav-bottom">
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pc.html">PC</a></li>
+                <li><a href="xbox.html">XBOX</a></li>
+                <li><a href="ps3.html">PS3</a></li>
+                <li><a href="wii.html">WII</a></li>
+                <li><a href="ds.html">DS</a></li>
+                <li class="separator">|</li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="video.html" class="active">Video</a></li>
+                <li><a href="trucos.html">Trucos</a></li>
+                <li><a href="descargas.html">Descargas</a></li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="pc-header pc-header-video">
+        <div class="header-content">
+            <div class="pc-icon-box"><i class="fas fa-play"></i></div>
+            <h1>Contenido <span>Multimedia</span></h1>
+            <p>Explora los mejores trailers, gameplays y tutoriales exclusivos de la comunidad.</p>
+        </div>
+    </header>
+
+    <div class="video-hero">
+        <div class="main-player">
+            <iframe src="https://www.youtube.com/embed/bM_2w-j9Q3c?controls=1&modestbranding=1&rel=0" title="Cyberpunk 2077 Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Información del video principal -->
+            <div class="main-player-info">
+                <h2>Tráiler Destacado: Delta Force Gameplay</h2>
+                <p>La nueva era de los shooters tácticos ha llegado.</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="pc-container">
+        <h2 style="margin-bottom: 30px; text-transform: uppercase;">Videos <span>Recientes</span></h2>
+        
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-player-wrapper">
+                    <iframe src="https://www.youtube.com/embed/S2C_tMv2o-Q?controls=1&modestbranding=1&rel=0" title="Warframe Gameplay" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="game-info">
+                    <h3>Warframe: Build Prime 2026</h3>
+                    <p>Cómo maximizar el daño de tu Excalibur en misiones de alto nivel.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-wrapper">
+                    <iframe src="https://www.youtube.com/embed/XyWw-aF_bYQ?controls=1&modestbranding=1&rel=0" title="Xbox Series S Test" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="game-info">
+                    <h3>Xbox Series S: Test de Rendimiento</h3>
+                    <p>Probamos los últimos lanzamientos de Game Pass en la pequeña de Microsoft.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-wrapper">
+                    <iframe src="https://www.youtube.com/embed/zCg16mY1J1Q?controls=1&modestbranding=1&rel=0" title="Limpieza Acer Aspire 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="game-info">
+                    <h3>Limpieza Acer Aspire 3</h3>
+                    <p>Tutorial paso a paso para aplicar pasta térmica correctamente.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-wrapper">
+                    <iframe src="https://www.youtube.com/embed/rV5p5mR-6nE?controls=1&modestbranding=1&rel=0" title="Nintendo DS R4 Guide" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="game-info">
+                    <h3>Nintendo DS: Guía R4 2026</h3>
+                    <p>Instalación de kernels y mejores aplicaciones homebrew.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> GAME<span>PORTAL</span></a>
+                <p>Tu portal definitivo para guías, optimización y comunidad gamer. Desde clásicos de Nintendo hasta lo último en hardware y software para PC.</p>
+                <div class="footer-social">
+                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer" title="Twitch"><i class="fab fa-twitch"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pc.html">PC Gaming</a></li>
+                    <li><a href="xbox.html">Xbox</a></li>
+                    <li><a href="ps3.html">PS3</a></li>
+                    <li><a href="wii.html">Wii</a></li>
+                    <li><a href="ds.html">DS</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contenido</h4>
+                <ul>
+                    <li><a href="trucos.html">Trucos</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="descargas.html">Descargas</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Comunidad</h4>
+                <ul>
+                    <li><a href="comunidad.html">Muro</a></li>
+                    <li><a href="foro.html">Foro</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"> 
+                <p>&copy; 2026 GAMEPORTAL. Todos los derechos reservados. | <a href="privacidad.html">Política de Privacidad</a> | <a href="terminos.html">Términos de Servicio</a> | Hecho por Jean Silva</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

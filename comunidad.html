@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad | GAMEPORTAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container nav-top">
+            <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> GAME<span>PORTAL</span></a>
+            <div class="google-search-wrap">
+                <form class="google-search-bar" onsubmit="event.preventDefault();">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="¿Qué estás buscando en GAMEPORTAL?" class="google-search-input">
+                    <div class="google-autocomplete"></div>
+                </form>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" class="btn-login">INICIO</a>
+                <a href="registro.html" class="btn-login btn-register">REGISTRO</a>
+            </div>
+        </div>
+        <div class="nav-container nav-bottom">
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pc.html">PC</a></li>
+                <li><a href="xbox.html">XBOX</a></li>
+                <li><a href="ps3.html">PS3</a></li>
+                <li><a href="wii.html">WII</a></li>
+                <li><a href="ds.html">DS</a></li>
+                <li class="separator">|</li>
+                <li><a href="comunidad.html" class="active">Comunidad</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="trucos.html">Trucos</a></li>
+                <li><a href="descargas.html">Descargas</a></li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="pc-header pc-header-comunidad">
+        <div class="header-content">
+            <div class="pc-icon-box"><i class="fas fa-stream"></i></div>
+            <h1>Comunidad <span>Gamer</span></h1>
+            <p>Comparte tus logros, capturas y estados con la legión de GAMEPORTAL.</p>
+        </div>
+    </header>
+
+    <main class="pc-container">
+        <div class="community-layout">
+            <!-- Columna del Muro -->
+            <div class="community-wall">
+                <!-- Gamer Stories Bar -->
+                <div class="stories-container">
+                    <input type="file" id="storyInput" accept="image/*" style="display: none;">
+                    <!-- "Tu Estado" card -->
+                    <div class="story-card story-upload" id="btnUploadStory">
+                        <div class="story-avatar">
+                            <i class="fas fa-plus" style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--text-gray);"></i>
+                        </div>
+                        <span>Tu Estado</span>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-avatar"><img src="https://i.pravatar.cc/150?u=tech" alt="User"></div>
+                        <span>TechGuru</span>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-avatar"><img src="https://i.pravatar.cc/150?u=ghost" alt="User"></div>
+                        <span>Ghost...</span>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-avatar"><img src="https://i.pravatar.cc/150?u=pixel" alt="User"></div>
+                        <span>PixelQ</span>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-avatar"><img src="https://i.pravatar.cc/150?u=slayer" alt="User"></div>
+                        <span>Slayer</span>
+                    </div>
+                </div>
+                <!-- Caja de creación de posts -->
+                <div class="post-creator">
+                    <textarea id="wallPostInput" rows="3" placeholder="¿Qué hay de nuevo, Gamer?"></textarea>
+                    
+                    <!-- Contenedor de Previsualización de Media -->
+                    <div id="mediaPreviewContainer" style="display: none; margin-top: 15px; position: relative;">
+                        <img id="mediaPreviewImg" src="" alt="Preview" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <button id="removeMediaBtn" style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); border: none; color: white; width: 30px; height: 30px; border-radius: 50%; cursor: pointer;"><i class="fas fa-times"></i></button>
+                    </div>
+
+                    <!-- Contenedor de Encuesta -->
+                    <div id="pollCreatorContainer" style="display: none; margin-top: 15px; padding: 15px; background: rgba(255, 255, 255, 0.02); border-radius: 8px; border: 1px dashed var(--red-neon);">
+                        <div class="form-group" style="margin-bottom: 10px;">
+                            <input type="text" id="pollOption1" placeholder="Opción 1 de la encuesta..." style="background: rgba(0,0,0,0.4); border-color: rgba(255,255,255,0.1); padding: 10px;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <input type="text" id="pollOption2" placeholder="Opción 2 de la encuesta..." style="background: rgba(0,0,0,0.4); border-color: rgba(255,255,255,0.1); padding: 10px;">
+                        </div>
+                    </div>
+
+                    <!-- Contenedor de Enlace de Video -->
+                    <div id="videoUrlContainer" style="display: none; margin-top: 15px; padding: 15px; background: rgba(255, 255, 255, 0.02); border-radius: 8px; border: 1px dashed var(--blue-neon);">
+                        <div class="form-group" style="display: flex; gap: 10px; margin-bottom: 0;">
+                            <input type="text" id="videoUrlInput" placeholder="Pega un enlace de YouTube o video..." style="background: rgba(0,0,0,0.4); border-color: rgba(255,255,255,0.1); padding: 10px; flex: 1;">
+                            <button id="btnConfirmVideo" class="btn-submit" style="width: auto; margin: 0; padding: 0 15px; background: var(--blue-neon);"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="post-creator-footer">
+                        <div class="post-creator-actions">
+                            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                            <button id="btnActionImage" title="Subir Imagen"><i class="fas fa-image"></i> <span>Imagen</span></button>
+                            <button id="btnActionVideo" title="Añadir Video"><i class="fas fa-video"></i> <span>Video</span></button>
+                            <button id="btnActionPoll" title="Encuesta"><i class="fas fa-poll-h"></i> <span>Encuesta</span></button>
+                        </div>
+                        <button id="btnPostWall" class="btn-submit" style="width: auto; padding: 10px 30px;">Publicar</button>
+                    </div>
+                </div>
+
+                <!-- Feed de publicaciones -->
+                <div id="communityFeed">
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="avatar-wrapper">
+                                <img src="https://ui-avatars.com/api/?background=ff1a1a&color=fff&name=JL" alt="Admin">
+                                <span class="status-online pulse"></span>
+                            </div>
+                            <div class="post-user-info">
+                                <strong>JuanLauncher <i class="fas fa-check-circle verified-badge" title="Verificado"></i></strong>
+                                <span>Hace 5 minutos</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            ¡Bienvenidos al muro de GAMEPORTAL! Aquí podéis publicar vuestras dudas, capturas de pantalla o simplemente saludar. ¡GG WP!
+                        </div>
+                        <div class="post-actions">
+                            <button class="btn-like"><i class="far fa-heart"></i> Like <span class="like-count">0</span></button>
+                            <button class="btn-comment"><i class="far fa-comment"></i> Comentar <span class="comment-count">0</span></button>
+                        </div>
+                        <div class="comment-section">
+                            <div class="comments-list"></div>
+                            <div class="comment-input-wrapper">
+                                <textarea placeholder="Escribe un comentario..." rows="1"></textarea>
+                                <button class="btn-submit btn-send-comment" style="width: auto; padding: 5px 15px; font-size: 0.8rem; margin: 0;">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post de Video de Gamer Invitado -->
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="avatar-wrapper">
+                                <img src="https://ui-avatars.com/api/?background=333&color=fff&name=G" alt="Gamer Invitado">
+                                <span class="status-online pulse"></span>
+                            </div>
+                            <div class="post-user-info">
+                                <strong>Gamer Invitado</strong>
+                                <span>Hace 1 hora</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            ¡No os perdáis el nuevo trailer de mi juego favorito! ¡Se ve increíble!
+                            <div class="post-video-preview" data-video-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="position:relative; margin-top:10px; border-radius:8px; overflow:hidden; border: 1px solid var(--blue-neon); aspect-ratio: 16/9; background:#000; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+                                <i class="fas fa-play" style="font-size:3rem; color:var(--blue-neon); opacity:0.8;"></i>
+                                <div style="position:absolute; bottom:10px; left:10px; font-size:0.7rem; color:white; background:rgba(0,0,0,0.6); padding:2px 8px; border-radius:4px; max-width:80%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+                                    https://www.youtube.com/watch?v=dQw4w9WgXcQ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="btn-like"><i class="far fa-heart"></i> Like <span class="like-count">15</span></button>
+                            <button class="btn-comment"><i class="far fa-comment"></i> Comentar <span class="comment-count">2</span></button>
+                        </div>
+                        <div class="comment-section">
+                            <div class="comments-list">
+                                <div class="comment-item"><span class="comment-user">Slayer</span><p class="comment-text">¡Uff, hype al máximo!</p></div>
+                            </div>
+                            <div class="comment-input-wrapper">
+                                <textarea placeholder="Escribe un comentario..." rows="1"></textarea>
+                                <button class="btn-submit btn-send-comment">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post de PixelQueen -->
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="avatar-wrapper">
+                                <img src="https://i.pravatar.cc/150?u=pixel" alt="PixelQueen">
+                                <span class="status-online pulse"></span>
+                            </div>
+                            <div class="post-user-info">
+                                <strong>PixelQueen</strong>
+                                <span>Hace 2 horas</span>
+                        </div>
+                        </div>
+                        <div class="post-content">
+                            ¡Mirad mi nuevo setup! He configurado todo el neón en color "GamePortal Red". ¿Qué os parece? <br>
+                            <img src="Img/setup PixelQueen.jpg" alt="Setup" style="width:100%; border-radius:8px; margin-top:10px; border: 1px solid var(--border-color);"> #SetupNeonRed #GamingLife
+                        </div>
+                        <div class="post-actions">
+                            <button class="btn-like"><i class="far fa-heart"></i> Like <span class="like-count">24</span></button>
+                            <button class="btn-comment"><i class="far fa-comment"></i> Comentar <span class="comment-count">3</span></button>
+                        </div>
+                        <div class="comment-section">
+                            <div class="comments-list">
+                                <div class="comment-item"><span class="comment-user">TechGuru</span><p class="comment-text">¡Ese rojo neón le queda increíble! 🔥</p></div>
+                                <div class="comment-item"><span class="comment-user">GhostPlayer</span><p class="comment-text">Setup de ensueño, felicidades.</p></div>
+                            </div>
+                            <div class="comment-input-wrapper">
+                                <textarea placeholder="Escribe un comentario..." rows="1"></textarea>
+                                <button class="btn-submit btn-send-comment">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra Lateral de Comunidad -->
+            <aside class="community-sidebar">
+                <div class="sidebar-menu"> <!-- Reusing the sidebar-menu class from trucos.html -->
+                    <h4><i class="fas fa-fire"></i> Tendencias</h4>
+                    <ul>
+                        <!-- Contenido generado dinámicamente por JS -->
+                    </ul>
+
+                    <h4 style="margin-top: 30px;"><i class="fas fa-users"></i> Gamers Destacados</h4>
+                    <ul>
+                        <!-- Contenido generado dinámicamente por JS -->
+                    </ul>
+                    <a href="foro.html" class="btn-read" style="font-size: 0.8rem; margin-top: 20px; display: inline-block;">Ir al Foro Completo</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Modal de Detalle de Juego Cyber-Minimalista -->
+    <div id="gameDetailModal" class="detail-modal-overlay">
+        <div class="modal-detail-card">
+            <span class="close-detail"><i class="fas fa-times"></i></span>
+            <div class="modal-header-img">
+                <img id="modalGameImg" src="" alt="Imagen del Juego">
+                <span id="modalGameBadge" class="modal-badge-dynamic">Sección</span>
+            </div>
+            <div class="modal-detail-body">
+                <div class="modal-view-info" id="modalViewInfo">
+                    <h2 id="modalGameTitle"></h2>
+                    <h4 id="modalGameSubtitle" style="color: var(--red-neon); margin-bottom: 15px; font-size: 0.9rem; text-transform: uppercase; display: none;"></h4>
+                    <div id="modalGameSynopsis" class="modal-synopsis"></div>
+                    <div id="modalTrickCodes" style="display: none;"></div>
+                    <ul class="modal-features">
+                        <li><i class="fas fa-microchip"></i> Rendimiento Optimizado</li>
+                        <li><i class="fas fa-shield-alt"></i> Instalación Segura</li>
+                        <li><i class="fas fa-users"></i> Soporte Multi-idioma</li>
+                    </ul>
+                </div>
+                <div class="modal-view-chars" id="modalViewChars">
+                    <h2 style="font-size: 1.4rem;">Personajes de <span id="charGameTitle">Juego</span></h2>
+                    <div class="modal-chars-grid" id="modalCharsGrid"></div>
+                </div>
+            </div>
+            <div class="modal-detail-footer">
+                <button class="btn-modal-main btn-card-dl"><i class="fas fa-download"></i> Descargar Juego</button>
+                <button class="btn-modal-sec btn-card-chars" id="btnToggleView"><i class="fas fa-users"></i> Ver Personajes</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> GAME<span>PORTAL</span></a>
+                <p>Tu portal definitivo para guías, optimización y comunidad gamer. Desde clásicos de Nintendo hasta lo último en hardware y software para PC.</p>
+                <div class="footer-social">
+                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer" title="Twitch"><i class="fab fa-twitch"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pc.html">PC Gaming</a></li>
+                    <li><a href="xbox.html">Xbox</a></li>
+                    <li><a href="ps3.html">PS3</a></li>
+                    <li><a href="wii.html">Wii</a></li>
+                    <li><a href="ds.html">DS</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contenido</h4>
+                <ul>
+                    <li><a href="trucos.html">Trucos</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="descargas.html">Descargas</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Comunidad</h4>
+                <ul>
+                    <li><a href="comunidad.html">Muro</a></li>
+                    <li><a href="foro.html">Foro</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"> 
+                <p>&copy; 2026 GAMEPORTAL. Todos los derechos reservados. | <a href="privacidad.html">Política de Privacidad</a> | <a href="terminos.html">Términos de Servicio</a> | Hecho por Jean Silva</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Visualización de Historias -->
+    <div id="storyViewer" class="story-viewer-overlay">
+        <div class="story-viewer-container">
+            <div class="story-progress-bar"><div class="story-progress-fill"></div></div>
+            
+            <button class="story-viewer-nav story-viewer-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="story-viewer-nav story-viewer-next"><i class="fas fa-chevron-right"></i></button>
+
+            <div class="story-viewer-header">
+                <img id="storyViewerAvatar" src="" alt="User">
+                <strong id="storyViewerUsername">Username</strong>
+                <span class="close-story-viewer"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="story-viewer-content">
+                <img id="storyViewerImg" src="" alt="Story Content">
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div id="videoPlayerModal" class="video-player-overlay">
+        <div class="video-player-container">
+            <span class="close-video-player"><i class="fas fa-times"></i></span>
+            <div class="video-player-content">
+                <iframe id="youtubePlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Visualización de Imágenes (Lightbox) -->
+    <div id="imageViewerModal" class="video-player-overlay" style="display: none; z-index: 6000;">
+        <span class="close-image-viewer">&times;</span>
+        <div class="video-player-container">
+            <img id="viewerImg" src="" alt="Imagen Full">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

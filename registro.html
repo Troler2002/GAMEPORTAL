@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | GAMEPORTAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="auth-page">
+
+    <nav class="navbar">
+        <div class="nav-container nav-top">
+            <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> GAME<span>PORTAL</span></a>
+            <div class="google-search-wrap">
+                <form class="google-search-bar" onsubmit="event.preventDefault();">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="¿Qué estás buscando en GAMEPORTAL?" class="google-search-input">
+                    <div class="google-autocomplete"></div>
+                </form>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" class="btn-login">INICIO</a>
+                <a href="registro.html" class="btn-login btn-register">REGISTRO</a>
+            </div>
+        </div>
+        <div class="nav-container nav-bottom">
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pc.html">PC</a></li>
+                <li><a href="xbox.html">XBOX</a></li>
+                <li><a href="ps3.html">PS3</a></li>
+                <li><a href="wii.html">WII</a></li>
+                <li><a href="ds.html">DS</a></li>
+                <li class="separator">|</li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="trucos.html">Trucos</a></li>
+                <li><a href="descargas.html">Descargas</a></li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="signup-wrapper pc-header-registro">
+        <section class="signup-card">
+            <div class="pc-icon-box"><i class="fas fa-user-plus"></i></div>
+            <h2>Únete a la <span>Elite</span></h2>
+            <p>Forma parte de nuestra comunidad y accede a guías exclusivas, descargas y el muro de la comunidad.</p>
+            
+            <form>
+                <div class="form-group">
+                    <label>Nombre de Usuario</label>
+                    <input type="text" placeholder="Ej: MasterGamer99" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Confirmar Contraseña</label>
+                    <div class="password-container">
+                        <input type="password" id="confirm-password" placeholder="••••••••" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                    <div id="password-error" class="error-neon">Las contraseñas no coinciden</div>
+                </div>
+                <div class="form-options" style="margin-bottom: 25px; font-size: 0.8rem; color: var(--text-gray);">
+                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; text-align: left; line-height: 1.4;">
+                        <input type="checkbox" required style="accent-color: var(--red-neon); margin-top: 3px;">
+                        <span>He leído y acepto los <a href="terminos.html" style="color: var(--red-neon); text-decoration: none;">Términos de Servicio</a> y la <a href="privacidad.html" style="color: var(--red-neon); text-decoration: none;">Política de Privacidad</a> de GAMEPORTAL.</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn-submit">Crear mi Cuenta</button>
+            </form>
+
+            <div class="signup-footer" style="margin-top: 30px;">
+                ¿Ya tienes una cuenta? <a href="login.html" style="font-weight: 800;">Inicia sesión aquí</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><i class="fas fa-gamepad"></i> GAME<span>PORTAL</span></a>
+                <p>Tu portal definitivo para guías, optimización y comunidad gamer. Desde clásicos de Nintendo hasta lo último en hardware y software para PC.</p>
+                <div class="footer-social">
+                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer" title="Twitch"><i class="fab fa-twitch"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pc.html">PC Gaming</a></li>
+                    <li><a href="xbox.html">Xbox</a></li>
+                    <li><a href="ps3.html">PS3</a></li>
+                    <li><a href="wii.html">Wii</a></li>
+                    <li><a href="ds.html">DS</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contenido</h4>
+                <ul>
+                    <li><a href="trucos.html">Trucos</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="descargas.html">Descargas</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Comunidad</h4>
+                <ul>
+                    <li><a href="comunidad.html">Muro</a></li>
+                    <li><a href="foro.html">Foro</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"> 
+                <p>&copy; 2026 GAMEPORTAL. Todos los derechos reservados. | <a href="privacidad.html">Política de Privacidad</a> | <a href="terminos.html">Términos de Servicio</a> | Hecho por Jean Silva</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
