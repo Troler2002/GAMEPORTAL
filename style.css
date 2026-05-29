@@ -900,12 +900,37 @@ main {
     .sidebar-menu { display: none; }
     .post-creator-actions button span { display: none; }
     .post-creator-actions { gap: 8px; }
+
+    /* Arreglo para el Layout de Comunidad en móviles */
+    .community-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .community-sidebar {
+        order: 2; /* Mueve las tendencias y gamers debajo del muro */
+    }
+
+    .post-creator-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .post-creator-actions {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .post-creator-footer .btn-submit {
+        width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
     .modal-detail-card {
         width: 95%;
-        max-height: 90vh;
+        height: 95vh;
+        max-height: 95vh;
         overflow-y: auto;
     }
     .modal-header-img { height: 180px; }
@@ -919,6 +944,15 @@ main {
     .btn-modal-main, .btn-modal-sec { width: 100%; }
     .tabs-container { gap: 8px; flex-wrap: wrap; }
     .tab-btn { padding: 10px 15px; font-size: 0.75rem; flex: 1 1 auto; }
+
+    /* Ajustes de texto para tarjetas en pantallas muy pequeñas */
+    .game-info h3, .tech-body h3 {
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
 }
 
 /* ESTILOS DEL MURO DE COMUNIDAD (TIPO FACEBOOK) */

@@ -109,6 +109,46 @@
         </div>
     </main>
 
+    <!-- Modal de Detalle de Juego Cyber-Minimalista -->
+    <div id="gameDetailModal" class="detail-modal-overlay">
+        <div class="modal-detail-card">
+            <span class="close-detail"><i class="fas fa-times"></i></span>
+            <div class="modal-header-img">
+                <img id="modalGameImg" src="" alt="Imagen del Juego">
+                <span id="modalGameBadge" class="modal-badge-dynamic">Sección</span>
+            </div>
+            <div class="modal-detail-body">
+                <div class="modal-view-info" id="modalViewInfo">
+                    <h2 id="modalGameTitle"></h2>
+                    <h4 id="modalGameSubtitle" style="color: var(--red-neon); margin-bottom: 15px; font-size: 0.9rem; text-transform: uppercase; display: none;"></h4>
+                    <div id="modalGameSynopsis" class="modal-synopsis"></div>
+                    <div id="modalTrickCodes" style="display: none;"></div>
+                    <ul class="modal-features">
+                        <li><i class="fas fa-microchip"></i> Rendimiento Optimizado</li>
+                        <li><i class="fas fa-shield-alt"></i> Instalación Segura</li>
+                        <li><i class="fas fa-users"></i> Soporte de Comunidad</li>
+                    </ul>
+                </div>
+                <div class="modal-view-chars" id="modalViewChars">
+                    <h2 style="font-size: 1.4rem;">Personajes de <span id="charGameTitle">Juego</span></h2>
+                    <div class="modal-chars-grid" id="modalCharsGrid"></div>
+                </div>
+            </div>
+            <div class="modal-detail-footer">
+                <button class="btn-modal-main btn-card-dl"><i class="fas fa-download"></i> Descargar Juego</button>
+                <button class="btn-modal-sec btn-card-chars" id="btnToggleView"><i class="fas fa-users"></i> Ver Personajes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Visualización de Imágenes (Lightbox) -->
+    <div id="imageViewerModal" class="video-player-overlay" style="display: none; z-index: 6000;">
+        <span class="close-image-viewer">&times;</span>
+        <div class="video-player-container">
+            <img id="viewerImg" src="" alt="Imagen Full">
+        </div>
+    </div>
+
     <footer class="main-footer">
         <div class="container footer-grid">
             <div class="footer-brand">

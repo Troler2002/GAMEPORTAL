@@ -1593,7 +1593,12 @@ Accede a la configuración de tu router y prioriza el tráfico de tus dispositiv
     };
 
     // --- EVENTOS GLOBALES DE CLIC ---
-    document.addEventListener('click', (e) => {
+    // Usamos mousedown y click para asegurar que la interacción con el autocompletado
+    // se capture antes de que el menú se oculte por el evento 'blur' del input.
+    const handleGlobalInteraction = (e) => {
+        const isClick = e.type === 'click';
+        const isMouseDown = e.type === 'mousedown';
+
         // 1. Clic en Tarjetas o enlaces "Leer más" (Abrir Modal de Guía)
         const btnRead = e.target.closest('.btn-read');
         const cardTrigger = e.target.closest('.game-card-trigger');
@@ -1619,7 +1624,7 @@ Accede a la configuración de tu router y prioriza el tráfico de tus dispositiv
         }
 
         if (shouldOpenModal) {
-            e.preventDefault(); // Prevent default navigation for modal-opening elements
+            if (isClick) e.preventDefault(); // Prevent default navigation for modal-opening elements
             if (targetElement.classList.contains('tech-card')) {
                 const title = targetElement.querySelector('h3')?.textContent.trim();
                 const foundData = SITE_DATA.find(item => item.title === title);
@@ -1635,19 +1640,26 @@ Accede a la configuración de tu router y prioriza el tráfico de tus dispositiv
 
         // 2. Clic en Resultados del Buscador
         const searchItem = e.target.closest('.google-item');
-        if (searchItem && searchItem.dataset.title) {
+        if (searchItem) {
+            // Evitamos la navegación y la pérdida de foco inmediata del buscador
             e.preventDefault();
-            const gameData = SITE_DATA.find(item => item.title === searchItem.dataset.title);
-            if (gameData) {
-                searchItem.closest('.google-autocomplete').style.display = 'none';
-                const modalData = { ...gameData, badgeClass: gameData.badge };
-                openGameDetail(modalData, null);
+            
+            // Usamos mousedown para interceptar la selección antes de que el 'blur' oculte el menú
+            if (isMouseDown && searchItem.dataset.title) {
+                const titleToFind = searchItem.dataset.title.trim().toLowerCase();
+                const gameData = SITE_DATA.find(item => item.title.trim().toLowerCase() === titleToFind);
+                if (gameData) {
+                    const autocomplete = searchItem.closest('.google-autocomplete');
+                    if (autocomplete) autocomplete.style.display = 'none';
+                    openGameDetail({ ...gameData, badgeClass: gameData.badge }, null);
+                }
             }
+            return;
         }
 
         // 3. Botones de Descarga
         const dlBtn = e.target.closest('.btn-card-dl, .btn-download');
-        if (dlBtn && !e.target.closest('.btn-copy-cheat')) {
+        if (isClick && dlBtn && !e.target.closest('.btn-copy-cheat')) {
             e.preventDefault();
             simulateDownload(dlBtn);
         }
@@ -1695,6 +1707,12 @@ Accede a la configuración de tu router y prioriza el tráfico de tus dispositiv
         if (e.target === gameDetailModal || e.target.closest('.close-detail')) closeGameDetail();
         if (e.target === imageViewerModal || e.target.closest('.close-image-viewer')) closeImageViewer();
         if (e.target.closest('#btnToggleView')) { e.preventDefault(); toggleModalView(); }
+    };
+
+    // Escuchamos ambos eventos para mayor robustez en menús dinámicos
+    document.addEventListener('click', handleGlobalInteraction);
+    document.addEventListener('mousedown', (e) => {
+        if (e.target.closest('.google-item')) handleGlobalInteraction(e);
     });
 
     // Cierre con Escape
